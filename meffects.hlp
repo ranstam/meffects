@@ -1,0 +1,34 @@
+{smcl}
+{* 05mar2016}{...}
+{hline}
+help for {hi:meffects} {right:manual:  {hi:[R] none}}
+{right:dialog:  {hi: none}    }
+{hline}
+
+{title:Syntax}
+   
+{p 4 4 2}{cmd:meffects} var [dec] {p_end}
+
+{p 4 4 2}Where var is the variable for which the effect size will be evaluated {p_end}
+{p 10 4 2}dec is the number of decimals for the output {p_end}
+
+{title:Description}
+
+{p 4 4 2}{cmd:meffects} estimates, and returns in r(), Cohen's f2 effect size measure after running xtmixed or mixed, see http://www.ats.ucla.edu/stat/stata/faq/xtmixed_effect_size.htm.{p_end}
+
+{title:Example}
+
+{p 4 4 2}{cmd:use} http://www.ats.ucla.edu/stat/data/hsbdemo, clear {p_end}
+{p 4 4 2}{cmd:mixed} write read female || cid:, var {p_end}
+{p 4 4 2}{cmd:meffects} "female" [4] {p_end}
+
+{title:Author}
+
+{p 4 4 2}
+Jonas Ranstam PhD {break}
+Mdas AB Rotfruktsgatan 12B, Ystad, Sweden, {break}
+http://www.ranstam.se, jonas.ranstam@gmail.com{p_end}
+
+
+
+
